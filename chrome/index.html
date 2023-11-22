@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font: 13px/27px Roboto,Arial,sans-serif;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        body{
+       background-color: rgba(32,33,36,1);
+        }
+        .root{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            row-gap: 6px;
+        }
+        header{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            height: 48px;
+            padding: 0 1%;
+            column-gap: 12px;
+            margin-top: 6px;
+        }
+        header span{
+            color: white;
+            text-transform: capitalize;
+            font-size: 14px;
+        }
+        header span:hover
+        { text-decoration: underline;
+            cursor: pointer;
+        }
+        header span[class="material-symbols-outlined"]{
+          padding: 6px;
+          border-radius: 50%;
+        }
+        header span[class="material-symbols-outlined"]:hover{
+           text-decoration: none;
+           background-color: rgba(232,234,237,.08);
+        }
+        header figure{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            border-radius: 50%;
+        }
+        header figure:hover{
+            background-color: rgba(232,234,237,.08);
+            cursor: pointer;
+        }
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            width: 585px;
+            position: relative;
+            justify-content: center;
+            row-gap: 30px;
+            column-gap: 10px;
+        }
+        form input[type=text]{
+             width: 100%;
+             border-radius: 25px;
+             height: 48px;
+             outline: 0;
+             background-color:rgba(32,33,36,1) ;
+             border:1px solid rgba(223, 225, 229, 0.384);
+             margin-top: 11px;
+             color: rgba(230, 230, 230, 0.979);
+             padding: 10px 45px;
+             font-size: 1.3rem;
+        }
+        form input[type=text]:hover{
+            background-color: rgba(223, 225, 229, 0.082);
+            border-color: rgba(32,33,36,1);
+        }
+        form input[type=text]:focus-visible{
+            background-color: rgba(223, 225, 229, 0.082);
+            border-color: rgba(32,33,36,1);
+        }
+ form > span{
+    position: absolute;
+    font-size: 1.5rem;
+    color: rgb(136, 136, 136);
+    top: 21px;
+    right: 81px;
+    color: rgba(255, 255, 255, 0.671);
+ }
+ span[class="fa-solid fa-search"]{
+    top: 28px;
+    left: 20px;
+    color: rgb(136, 136, 136);
+    font-size: 1.2rem;
+ }
+ span[class="fa-solid fa-microphone"]{
+    top: 28px;
+    right: 50px;
+    color: rgba(255, 255, 255, 0.671);
+    font-size: 1.2rem;
+ }
+ span[class="fa-solid fa-xmark"]{
+    top: 28px;
+    right: 110px;
+    color: rgba(255, 255, 255, 0.671);
+    font-size: 1.2rem;
+ }
+ span[class="fa-solid fa-camera"]{
+    top: 28px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.671);
+    font-size: 1.2rem;
+ }
+ form input[type="button"]{
+    text-transform: capitalize;
+    color: white;
+    height: 36px;
+    font-family: Arial,sans-serif;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 27px;
+    background-color: #303134;
+    border-radius: 5px;
+    border: 0;
+    border: 1px solid #303134;
+ }
+ form input[type="button"]:hover{
+    border: 1px solid rgb(90, 90, 90);
+ }
+ .root>span{
+    color:rgb(197, 197, 197);
+    padding: 10px;
+ }
+ .root .hindi-cinema{
+    color:#8ab4f8;
+ }
+ .languages ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 9px 0;
+    column-gap: 12px;
+ }
+ .languages li{
+    color: rgb(197, 197, 197);
+    text-transform: capitalize;
+ }
+ .languages li a{
+    color:#8ab4f8;
+ }
+ .languages li a:hover{
+    text-decoration: underline;
+    padding: 0 3px;
+ }
+ footer{
+    width: 100%;
+    margin-top: 94px;
+    background-color: rgba(0, 0, 0, 0.384);
+ }
+ footer ul{
+    color: white;
+    text-transform: capitalize;
+    font-family: Arial,sans-serif;
+ }
+ .sub-foot ul{
+    padding: 15px 30px;
+    border-bottom: 1px solid #3c4043;;
+ }
+ .sub-foot li{
+    font-size: 15px;
+ }
+ .foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+ }
+ .foot ul li{
+    padding: 15px;
+    font-size: 15px;
+ }
+    </style>
+</head>
+<body>
+ <div class="root">
+    <header>
+        <span>gmail</span>
+        <span>images</span>
+        <span class="material-symbols-outlined">
+            apps
+            </span>
+            <figure><img src="avatar3.png" alt="avatar" width="30px" height="30px"></figure>
+       </header>
+       <div class="logo">
+        <figure>
+            <img src="google.png" alt="google image" width="" height="">
+        </figure>
+       </div>
+       <form action="" method="get" >
+        <span class="fa-solid fa-search"></span>
+        <span class="fa-solid fa-microphone"></span>
+        <span class="fa-solid fa-xmark"></span>
+        <span>|</span>
+        <span class="fa-solid fa-camera"></span>
+        <input type="text">
+        <input type="button" value="google search">
+        <input type="button" value="i'm feeling lucky">
+       </form>
+       <span> Learn about the history, icons, and influences of <span class="hindi-cinema">Hindi Cinema</span></span>
+       <div class="languages">
+        <ul>
+            <li>google offered in :</li>
+            <li><a href="">हिन्दी</a></li>
+            <li><a href="">বাংলা</a></li>
+            <li><a href=""> తెలుగు</a></li>
+            <li><a href="">मराठी</a></li>
+            <li><a href="">தமிழ்</a></li>
+            <li><a href="">ગુજરાતી</a></li>
+            <li><a href="">ಕನ್ನಡ</a></li>
+            <li><a href="">മലയാളം</a></li>
+            <li><a href="">ਪੰਜਾਬੀ</a></li>
+        </ul>
+       </div>
+       <footer>
+         <div class="sub-foot">
+            <ul>
+                <li>india</li>
+            </ul>
+         </div>
+         <div class="foot">
+            <ul>
+                <li>about</li>
+                <li>advirtising</li>
+                <li>business</li>
+                <li>how search works</li>
+            </ul>
+            <ul>
+                <li>privacy</li>
+                <li>terms</li>
+                <li>settings</li>
+            </ul>
+         </div>
+       </footer>
+ </div>
+</body>
+</html>
